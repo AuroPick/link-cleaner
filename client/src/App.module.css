@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+}
+
+.link-cleaner-container {
+  flex-grow: 9;
+}
+
+.column {
+  flex-grow: 1;
+  max-width: 85px;
+}
+
+.new-links-container {
+  flex-grow: 3;
+}

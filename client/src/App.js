@@ -4,16 +4,18 @@ import LinkCleaner from "./components/LinkCleaner/LinkCleaner";
 import Column from "./components/Column/Column";
 import NewLinks from "./components/NewLinks/NewLinks";
 
+import styles from "./App.module.css";
+
 function App() {
   return (
-    <div className="container">
-      <div className="link-cleaner-container">
+    <div className={styles.container}>
+      <div className={styles["link-cleaner-container"]}>
         <LinkCleaner />
       </div>
-      <div className="column">
+      <div className={styles.column}>
         <Column />
       </div>
-      <div className="new-links-container">
+      <div className={styles["new-links-container"]}>
         <NewLinks />
       </div>
     </div>
