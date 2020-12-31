@@ -1,7 +1,10 @@
 import mongoose from "mongoose";
 
 const postLinkSchema = mongoose.Schema({
-    link: String,
+    link: {
+        type: String,
+        required: true
+    },
     createdAt: {
         type: Date,
         default: new Date(),
