@@ -11,6 +11,6 @@ const postLinkSchema = mongoose.Schema({
     },
 });
 
-var postLink = mongoose.model("postLink", postLinkSchema);
+var PostLink = mongoose.model("PostLink", postLinkSchema);
 
-export default postLink;
+export default PostLink;

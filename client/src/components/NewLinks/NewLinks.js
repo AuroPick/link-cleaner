@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { CircularProgress } from "@material-ui/core";
 
 import NewLink from "./NewLink/NewLink";
 
@@ -14,10 +15,15 @@ const NewLinks = () => {
         <h1>Son Linkler</h1>
       </div>
       <div className={styles["new-links"]}>
-        {links.map((link) => (
-          <NewLink key={link._id} link={link} />
-        ))}
+        {!links.length ? (
+          <div className={styles.progress}>
+            <CircularProgress />
+          </div>
+        ) : (
+          links.map((link) => <NewLink key={link._id} link={link} />)
+        )}
       </div>
+      <button className={styles["btn"]}>Tüm Linkler</button>
     </div>
   );
 };
