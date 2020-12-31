@@ -3,3 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+p,
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #444444;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}

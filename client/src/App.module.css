@@ -12,5 +12,8 @@
 }
 
 .new-links-container {
+  max-width: 30vw;
   flex-grow: 3;
+  display: flex;
+  justify-content: center;
 }
