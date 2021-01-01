@@ -8,15 +8,14 @@ import styles from "./NewLink.module.css";
 const formatter = buildFormatter(turkishStrings);
 
 const NewLink = ({ link }) => {
-
   return (
     <a
       href={link.link}
       target="_blank"
       rel="noreferrer"
-      className={styles["link-container"]}
+      className="link-container"
     >
-      <p className={styles.link}>{link.link}</p>
+      <p className="link">{link.link.slice(0, 40)}</p>
       <p className={styles["time-ago"]}>
         <TimeAgo date={link.createdAt} formatter={formatter} />
       </p>

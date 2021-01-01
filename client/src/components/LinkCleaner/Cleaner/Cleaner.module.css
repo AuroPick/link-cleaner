@@ -1,0 +1,46 @@
+.cleaner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 40vh;
+}
+
+.link-container {
+  width: 70%;
+  margin-bottom: 0 !important;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  width: 25vw;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 0 5px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: #aaaaaa;
+}
+
+.note {
+  font-size: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding-left: 27px !important;
+  padding-right: 27px !important;
+}

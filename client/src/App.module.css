@@ -4,6 +4,9 @@
 
 .link-cleaner-container {
   flex-grow: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .column {
@@ -13,7 +16,7 @@
 
 .new-links-container {
   max-width: 30vw;
-  flex-grow: 3;
+  flex-grow: 5;
   display: flex;
   justify-content: center;
 }

@@ -17,13 +17,15 @@ const NewLinks = () => {
       <div className={styles["new-links"]}>
         {!links.length ? (
           <div className={styles.progress}>
-            <CircularProgress />
+            <CircularProgress
+              className={styles["MuiCircularProgress-colorPrimary"]}
+            />
           </div>
         ) : (
           links.map((link) => <NewLink key={link._id} link={link} />)
         )}
       </div>
-      <button className={styles["btn"]}>Tüm Linkler</button>
+      <button className={[styles.btn, "btn"].join(" ")}>Tüm Linkler</button>
     </div>
   );
 };

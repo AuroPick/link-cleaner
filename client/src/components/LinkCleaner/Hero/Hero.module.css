@@ -1,0 +1,40 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 30vh;
+}
+
+.hero-inside-container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.social-links {
+  width: 60%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.github {
+  height: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.github-text {
+  font-weight: 600;
+  font-size: 12px;
+}

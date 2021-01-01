@@ -20,7 +20,7 @@ export const getLinks = async (req, res) => {
   }
 };
 
-export const getLink = async (req, res) => {
+export const getNewLinks = async (req, res) => {
   try {
     const link = await PostLink.find().limit(8).sort({ createdAt: -1 }).exec();
 

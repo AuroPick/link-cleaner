@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { getLinks } from "./actions/links";
+import { getNewLinks } from "./actions/links";
 import LinkCleaner from "./components/LinkCleaner/LinkCleaner";
 import Column from "./components/Column/Column";
 import NewLinks from "./components/NewLinks/NewLinks";
@@ -12,7 +12,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getLinks());
+    dispatch(getNewLinks());
   }, [dispatch]);
 
   return (
