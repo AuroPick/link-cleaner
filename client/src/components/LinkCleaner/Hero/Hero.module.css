@@ -4,6 +4,7 @@
   justify-content: space-around;
   align-items: center;
   height: 30vh;
+  min-height: 300px;
 }
 
 .hero-inside-container {

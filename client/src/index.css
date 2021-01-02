@@ -27,6 +27,7 @@ a {
   align-items: center;
   overflow: hidden;
   transition: box-shadow 200ms;
+  min-width: 300px;
 }
 
 .link-container:hover {

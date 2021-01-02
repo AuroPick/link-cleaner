@@ -6,6 +6,14 @@ export const getNewLinks = () => async (dispatch) => {
 
     dispatch({ type: "GET_NEW_LINKS", payload: data });
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+  }
+};
+
+export const postLink = (link) => async (dispatch) => {
+  try {
+    await api.postLink(link);
+  } catch (error) {
+    console.log(error);
   }
 };

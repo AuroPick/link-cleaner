@@ -1,6 +1,8 @@
 .link-cleaner-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 70vh;
+  min-height: 800px;
   width: 40%;
 }
