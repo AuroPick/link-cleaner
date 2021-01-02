@@ -4,5 +4,16 @@
   justify-content: center;
   height: 70vh;
   min-height: 800px;
-  width: 40%;
+}
+
+@media (max-height: 800px) {
+  .link-cleaner-container {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 630px) {
+  .link-cleaner-container {
+    height: auto;
+  }
 }

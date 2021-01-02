@@ -20,3 +20,24 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 1150px) {
+  .column {
+    display: none;
+  }
+
+  .link-cleaner-container {
+    flex-grow: 1;
+  }
+
+  .new-links-container {
+    flex-grow: 1;
+    max-width: 500px;
+  }
+
+  .container {
+    margin: 50px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

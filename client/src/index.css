@@ -27,7 +27,6 @@ a {
   align-items: center;
   overflow: hidden;
   transition: box-shadow 200ms;
-  min-width: 300px;
 }
 
 .link-container:hover {
@@ -59,4 +58,25 @@ a {
   font-weight: 600;
   margin-left: 20px;
   width: 90%;
+}
+
+@media (max-width: 1600px) {
+  .link {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .MuiFormControlLabel-label {
+    font-size: 13px !important;
+}
 }

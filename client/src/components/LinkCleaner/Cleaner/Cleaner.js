@@ -63,7 +63,7 @@ const Cleaner = () => {
           label="Linki veritabanına kaydet"
         />
         <p className={styles.note}>Not: Link veritabanında varsa kaydedilmez</p>
-        <button className={[styles.btn, "btn"].join(" ")} type="submit">
+        <button className={`${styles.btn} btn`} type="submit">
           Temizle
         </button>
       </form>

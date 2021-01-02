@@ -22,6 +22,7 @@
 
 .input {
   width: 25vw;
+  min-width: 300px;
   background-color: #f2f2f2;
   border: none;
   border-radius: 10px;
@@ -44,4 +45,19 @@
   margin-top: 10px;
   padding-left: 27px !important;
   padding-right: 27px !important;
+}
+
+@media (max-width: 1366px) {
+  .btn {
+    padding-left: 23px !important;
+    padding-right: 23px !important;
+  }
+
+  .input {
+    font-size: 13px;
+  }
+
+  .note {
+    font-size: 8px;
+  }
 }

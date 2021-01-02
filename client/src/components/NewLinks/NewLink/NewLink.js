@@ -13,7 +13,7 @@ const NewLink = ({ link }) => {
       href={link.link}
       target="_blank"
       rel="noreferrer"
-      className="link-container"
+      className={`${styles["link-container"]} link-container `}
     >
       <p className="link">{link.link.slice(0, 40)}</p>
       <p className={styles["time-ago"]}>
