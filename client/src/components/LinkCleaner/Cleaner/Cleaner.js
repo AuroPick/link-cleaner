@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import tld from "tld-list";
 
 import { postLink } from "../../../actions/links";
 
@@ -32,12 +33,30 @@ const Cleaner = () => {
   }, [cleanLink, submitCheck, dispatch]);
 
   const handleSubmit = (e) => {
+    let cleanedLink;
     e.preventDefault();
-    const cleanedLink = typedLink.replace(/[^aA-zZ0-9./:-_]+/g, "");
-    setCleanLink({ link: cleanedLink });
-    if (checked) {
-      setSubmitCheck(true);
-    }
+    tld.some((domain) => {
+      let check = false;
+      if (typedLink.toLowerCase().includes(`.${domain}`)) {
+        check = true;
+        if (
+          typedLink.toLowerCase().startsWith("https://") ||
+          typedLink.toLowerCase().startsWith("http://")
+        ) {
+          cleanedLink = typedLink.replace(/[^aA-zZ0-9./:-_]+/g, "");
+        } else {
+          cleanedLink = typedLink
+            .replace(/[^aA-zZ0-9./:-_]+/g, "")
+            .replace(/^/, "https://");
+        }
+
+        setCleanLink({ link: cleanedLink });
+        if (checked) {
+          setSubmitCheck(true);
+        }
+      }
+      return check;
+    });
   };
 
   return (
@@ -62,7 +81,7 @@ const Cleaner = () => {
           }
           label="Linki veritabanına kaydet"
         />
-        <p className={styles.note}>Not: Link veritabanında varsa kaydedilmez</p>
+        <p className={styles.note}>Not: Link veritabanında varsa veya .com gibi uzantı içermiyorsa kaydedilmez</p>
         <button className={`${styles.btn} btn`} type="submit">
           Temizle
         </button>
@@ -73,7 +92,9 @@ const Cleaner = () => {
         rel="noreferrer"
         className={[styles["link-container"], "link-container"].join(" ")}
       >
-        <p className="link">{cleanLink.link.slice(0, 35) || " "}</p>
+        <p className="link">
+          {cleanLink.link ? cleanLink.link.slice(0, 35) : " "}
+        </p>
       </a>
     </div>
   );
