@@ -5,6 +5,10 @@
   font-size: 12px;
 }
 
+.link-container {
+  min-height: 65px;
+}
+
 @media (max-width: 1600px) {
   .link-container {
     margin-bottom: 10px !important;

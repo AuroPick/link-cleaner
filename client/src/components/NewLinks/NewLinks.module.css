@@ -1,5 +1,5 @@
 .new-links-wrapper {
-  padding-top: 30px;
+  margin-top: 30px;
   width: 80%;
 }
 
@@ -33,4 +33,23 @@
 
 .MuiCircularProgress-colorPrimary {
   color: #6c63ff !important;
+}
+
+@media (max-width: 605px) {
+  .new-links-wrapper {
+    position: relative;
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .btn {
+    font-size: 10px !important;
+    padding: 5px !important;
+  }
 }

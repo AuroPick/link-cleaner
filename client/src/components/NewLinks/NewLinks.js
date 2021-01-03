@@ -25,7 +25,7 @@ const NewLinks = () => {
           links.map((link) => <NewLink key={link._id} link={link} />)
         )}
       </div>
-      <button className={[styles.btn, "btn"].join(" ")}>Tüm Linkler</button>
+      <button className={`${styles.btn} btn`}>Tüm Linkler</button>
     </div>
   );
 };

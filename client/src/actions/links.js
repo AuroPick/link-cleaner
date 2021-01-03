@@ -12,7 +12,9 @@ export const getNewLinks = () => async (dispatch) => {
 
 export const postLink = (link) => async (dispatch) => {
   try {
-    await api.postLink(link);
+    const { data } = await api.postLink(link);
+
+    dispatch({ type: "POST_LINK", payload: data });
   } catch (error) {
     console.log(error);
   }

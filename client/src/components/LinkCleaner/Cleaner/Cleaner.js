@@ -29,25 +29,26 @@ const Cleaner = () => {
     setTypedLink("");
     if (submitCheck) {
       dispatch(postLink(cleanLink));
+      setSubmitCheck(false);
+      setChecked(false);
     }
   }, [cleanLink, submitCheck, dispatch]);
 
   const handleSubmit = (e) => {
-    let cleanedLink;
     e.preventDefault();
+    let cleanedLink = typedLink.replace(/[^aA-zZ0-9./:-_]+/g, "");
+
     tld.some((domain) => {
       let check = false;
-      if (typedLink.toLowerCase().includes(`.${domain}`)) {
+      if (cleanedLink.toLowerCase().includes(`.${domain}`)) {
         check = true;
+
         if (
-          typedLink.toLowerCase().startsWith("https://") ||
-          typedLink.toLowerCase().startsWith("http://")
+          cleanedLink.toLowerCase().startsWith("http://") ||
+          cleanedLink.toLowerCase().startsWith("https://")
         ) {
-          cleanedLink = typedLink.replace(/[^aA-zZ0-9./:-_]+/g, "");
         } else {
-          cleanedLink = typedLink
-            .replace(/[^aA-zZ0-9./:-_]+/g, "")
-            .replace(/^/, "https://");
+          cleanedLink = cleanedLink.replace(/^/, "https://");
         }
 
         setCleanLink({ link: cleanedLink });
@@ -70,6 +71,7 @@ const Cleaner = () => {
           value={typedLink}
           onChange={(e) => setTypedLink(e.target.value)}
           size="50"
+          required={true}
         />
         <FormControlLabel
           className={styles["MuiFormControlLabel-label"]}
@@ -81,7 +83,10 @@ const Cleaner = () => {
           }
           label="Linki veritabanına kaydet"
         />
-        <p className={styles.note}>Not: Link veritabanında varsa veya .com gibi uzantı içermiyorsa kaydedilmez</p>
+        <p className={styles.note}>
+          Not: Link veritabanında varsa veya .com gibi uzantı içermiyorsa
+          kaydedilmez
+        </p>
         <button className={`${styles.btn} btn`} type="submit">
           Temizle
         </button>
