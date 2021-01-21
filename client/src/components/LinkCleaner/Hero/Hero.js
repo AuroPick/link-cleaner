@@ -1,4 +1,5 @@
 import React from "react";
+import { Facebook, Instagram, GitHub } from "@material-ui/icons"
 
 import styles from "./Hero.module.css";
 
@@ -14,20 +15,14 @@ const Hero = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src={process.env.PUBLIC_URL + "/svg/facebook.svg"}
-              alt="facebook"
-            />
+            <Facebook color="primary" className={styles["social-svg"]} />
           </a>
           <a
             href="https://www.instagram.com/aykut_saki/"
             target="_blank"
             rel="noreferrer"
           >
-            <img
-              src={process.env.PUBLIC_URL + "/svg/instagram.svg"}
-              alt="instagram"
-            />
+            <Instagram color="primary" className={styles["social-svg"]} />
           </a>
         </div>
       </div>
@@ -40,7 +35,7 @@ const Hero = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <img src={process.env.PUBLIC_URL + "/svg/github.svg"} alt="github" />
+          <GitHub color="primary" className={styles["social-svg"]} />
         </a>
       </div>
     </div>

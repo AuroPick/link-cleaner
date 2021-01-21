@@ -39,3 +39,7 @@
   font-weight: 600;
   font-size: 12px;
 }
+
+.social-svg:hover {
+  color: #333333 !important;
+}
