@@ -60,6 +60,10 @@ a {
   width: 90%;
 }
 
+.MuiSvgIcon-colorPrimary {
+  color: #444444 !important;
+}
+
 @media (max-width: 1600px) {
   .link {
     font-size: 13px;
