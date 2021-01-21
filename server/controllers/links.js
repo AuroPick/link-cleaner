@@ -10,11 +10,11 @@ export const getLinks = async (req, res) => {
     const total = await PostLink.countDocuments({});
     const links = await PostLink.find()
       .sort({ createdAt: -1 })
-      .limit(16)
-      .skip(16 * page)
+      .limit(48)
+      .skip(48 * page)
       .exec();
-
-    res.status(200).json({ totalPages: Math.ceil(total / 16), links });
+    const totalPages = Math.ceil(total / 48) - 1;
+    res.status(200).json({ totalPages, hasMore: page == totalPages ? false : true, currentPage: page, totalLinks: total, links });
   } catch (error) {
     res.status(404).json({ messaga: error.message });
   }
