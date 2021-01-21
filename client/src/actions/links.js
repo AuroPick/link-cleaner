@@ -1,5 +1,15 @@
 import * as api from "../api";
 
+export const getLinks = (pageNumber) => async (dispatch) => {
+  try {
+    const { data } = await api.getLinks(pageNumber);
+
+    dispatch({ type: "GET_LINKS", payload: data });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export const getNewLinks = () => async (dispatch) => {
   try {
     const { data } = await api.getNewLinks();
