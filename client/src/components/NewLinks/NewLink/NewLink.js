@@ -12,10 +12,10 @@ const NewLink = ({ link }) => {
     <a
       href={link.link}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className={`${styles["link-container"]} link-container `}
     >
-      <p className="link">{link.link.slice(0, 40)}</p>
+      <p className="link">{link?.link?.slice(0, 40)}</p>
       <p className={styles["time-ago"]}>
         <TimeAgo date={link.createdAt} formatter={formatter} />
       </p>

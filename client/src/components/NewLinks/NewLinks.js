@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { CircularProgress } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 import NewLink from "./NewLink/NewLink";
 
 import styles from "./NewLinks.module.css";
 
 const NewLinks = () => {
-  const links = useSelector((state) => state.links);
+  const links = useSelector((state) => state.newLinks);
 
   return (
     <div className={styles["new-links-wrapper"]}>
@@ -25,7 +26,9 @@ const NewLinks = () => {
           links.map((link) => <NewLink key={link._id} link={link} />)
         )}
       </div>
-      <button className={`${styles.btn} btn`}>Tüm Linkler</button>
+      <Link to="/links" className={`${styles.btn} btn`}>
+        Tüm Linkler
+      </Link>
     </div>
   );
 };
