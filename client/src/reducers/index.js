@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 
-import links from "./links";
+import newLinks from "./newLinks";
+import allLinks from "./allLinks";
 
-export const reducers = combineReducers({ links });
+export const reducers = combineReducers({ newLinks, allLinks });
