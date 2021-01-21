@@ -36,7 +36,7 @@ const Cleaner = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let cleanedLink = typedLink.replace(/[^aA-zZ0-9./:-_]+/g, "");
+    let cleanedLink = typedLink.replace(/[^aA-zZ0-9-./:_]+/g, "");
 
     tld.some((domain) => {
       let check = false;
@@ -94,7 +94,7 @@ const Cleaner = () => {
       <a
         href={cleanLink.link || " "}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className={[styles["link-container"], "link-container"].join(" ")}
       >
         <p className="link">
