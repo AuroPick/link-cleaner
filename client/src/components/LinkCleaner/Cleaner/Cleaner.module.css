@@ -48,6 +48,16 @@
   padding-right: 27px !important;
 }
 
+.alert{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  margin-right: 20px;
+  z-index: 1;
+  font-family: "Montserrat", sans-serif !important;
+  letter-spacing: unset !important;
+}
+
 @media (max-width: 1366px) {
   .btn {
     padding-left: 23px !important;

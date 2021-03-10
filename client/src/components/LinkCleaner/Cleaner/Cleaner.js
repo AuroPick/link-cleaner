@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
+import { Alert } from "@material-ui/lab";
 import tld from "tld-list";
 
 import { postLink } from "../../../actions/links";
@@ -23,6 +24,7 @@ const Cleaner = () => {
   const [submitCheck, setSubmitCheck] = useState(false);
   const [typedLink, setTypedLink] = useState("");
   const [cleanLink, setCleanLink] = useState({ link: "" });
+  const [message, setMessage] = useState(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,7 +38,10 @@ const Cleaner = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let cleanedLink = typedLink.replace(/[^aA-zZ0-9-./:_]+/g, "");
+    let cleanedLink = typedLink.replace(
+      /( |\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g,
+      ""
+    );
 
     tld.some((domain) => {
       let check = false;
@@ -52,9 +57,15 @@ const Cleaner = () => {
         }
 
         setCleanLink({ link: cleanedLink });
+        setMessage(() => null);
         if (checked) {
           setSubmitCheck(true);
         }
+      } else {
+        setMessage(
+          () =>
+            ["Link geçerli bir domain değil. Lütfen ", <strong>.com</strong>, " gibi bir top level domain içerdiğinden emin olun."]
+        );
       }
       return check;
     });
@@ -101,6 +112,11 @@ const Cleaner = () => {
           {cleanLink.link ? cleanLink.link.slice(0, 35) : " "}
         </p>
       </a>
+      {message && (
+        <Alert className={styles.alert} severity="error" onClose={() => setMessage(null)}>
+          {message}
+        </Alert>
+      )}
     </div>
   );
 };
