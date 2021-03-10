@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { CircularProgress } from "@material-ui/core";
 
 import { getLinks } from "../../actions/links";
-import NewLink from "../NewLinks/NewLink/NewLink";
+import NewLink from "../../components/NewLinks/NewLink/NewLink";
 
 import styles from "./AllLinks.module.css";
 
