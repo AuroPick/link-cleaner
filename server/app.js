@@ -14,6 +14,10 @@ app.use(cors());
 
 app.use("/links", links);
 
+app.get("/", (req, res) => {
+  res.send("Link cleaner backend");
+});
+
 const PORT = process.env.PORT || 5000;
 
 mongoose
