@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://link-cleaner.herokuapp.com/links";
+const url = process.env.REACT_APP_BACKEND_URL;
 
 export const getLinks = (pageNumber) => axios.get(`${url}?page=${pageNumber}`);
 export const getNewLinks = () => axios.get(`${url}/get-links`);
