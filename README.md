@@ -43,3 +43,9 @@
   ```bash
   start npm start --prefix server && start npm start --prefix client
   ```
+
+## Regex used for cleaning process
+```regex
+/( |\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/g
+```
+[See in code](https://github.com/AuroPick/link-cleaner/blob/master/client/src/components/LinkCleaner/Cleaner/Cleaner.js#L42)
