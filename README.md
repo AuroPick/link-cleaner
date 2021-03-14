@@ -1,12 +1,12 @@
 <div align="center">
 	<h1>Link Cleaner</h1>
-  <a href="https://github.com/AuroPick/link-cleaner/blob/master/LICENSE" target="_blank"><img alt="GitHub" src="https://img.shields.io/github/license/AuroPick/link-cleaner"></a>
-  <a href="https://link-cleaner.netlify.app" target="_blank"><img alt="Website" src="https://img.shields.io/website?logo=Netlify&url=https%3A%2F%2Flink-cleaner.netlify.app"></a>
-  <a href="https://link-cleaner.herokuapp.com" target="_blank"><img alt="Website" src="https://img.shields.io/website?label=backend&logo=Heroku&url=https%3A%2F%2Flink-cleaner.herokuapp.com"></a>
+  <a href="https://github.com/AuroPick/link-cleaner/blob/master/LICENSE" target="_blank" rel="noopener"><img alt="GitHub" src="https://img.shields.io/github/license/AuroPick/link-cleaner"></a>
+  <a href="https://link-cleaner.netlify.app" target="_blank" rel="noopener"><img alt="Website" src="https://img.shields.io/website?logo=Netlify&url=https%3A%2F%2Flink-cleaner.netlify.app"></a>
+  <a href="https://link-cleaner.herokuapp.com" target="_blank" rel="noopener"><img alt="Website" src="https://img.shields.io/website?label=backend&logo=Heroku&url=https%3A%2F%2Flink-cleaner.herokuapp.com"></a>
 	<p><b>Remove spaces and emojis from your links.</b></p>
 </div>
 </br>
-<a href="https://link-cleaner.netlify.app" target="_blank"><img src="https://user-images.githubusercontent.com/53499802/111077567-6ff9c200-8502-11eb-8735-ac0ef15d08b4.gif" /></a>
+<a href="https://link-cleaner.netlify.app" target="_blank" rel="noopener"><img src="https://user-images.githubusercontent.com/53499802/111077567-6ff9c200-8502-11eb-8735-ac0ef15d08b4.gif" /></a>
 
 ## Features
 :heavy_check_mark: Link cleaning with regex  
