@@ -1,8 +1,8 @@
 <div align="center">
 	<h1>Link Cleaner</h1>
   <a href="https://github.com/AuroPick/link-cleaner/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/AuroPick/link-cleaner"></a>
-  <a href="https://link-cleaner.netlify.app"><img alt="Website" src="https://img.shields.io/website?logo=Netlify&url=https%3A%2F%2Flink-cleaner.netlify.app"></a>
-  <a href="https://link-cleaner.herokuapp.com"><img alt="Website" src="https://img.shields.io/website?label=backend&logo=Heroku&url=https%3A%2F%2Flink-cleaner.herokuapp.com"></a>
+  <a href="https://link-cleaner.netlify.app"><img alt="Website" src="https://img.shields.io/website?label=client&logo=Netlify&url=https%3A%2F%2Flink-cleaner.netlify.app"></a>
+  <a href="https://link-cleaner.herokuapp.com"><img alt="Website" src="https://img.shields.io/website?label=server&logo=Heroku&url=https%3A%2F%2Flink-cleaner.herokuapp.com"></a>
 	<p><b>Remove spaces and emojis from your links.</b></p>
 </div>
 </br>
