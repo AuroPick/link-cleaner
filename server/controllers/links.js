@@ -16,7 +16,7 @@ export const getLinks = async (req, res) => {
     const totalPages = Math.ceil(total / 48) - 1;
     res.status(200).json({ totalPages, hasMore: page == totalPages ? false : true, currentPage: page, totalLinks: total, links });
   } catch (error) {
-    res.status(404).json({ messaga: error.message });
+    res.status(404).json({ message: error.message });
   }
 };
 
