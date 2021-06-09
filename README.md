@@ -12,7 +12,7 @@
 :heavy_check_mark: Link cleaning with regex  
 :heavy_check_mark: Adding link to database  
 :heavy_check_mark: See all links added to database  
-:heavy_check_mark: Infinte scrolling  
+:heavy_check_mark: Infinite scrolling  
 :large_blue_circle: Real-time update  
 :large_blue_circle: Open graph  
 :large_blue_circle: Comments to links  
