@@ -31,7 +31,7 @@
 
 1. Install [NodeJS](https://nodejs.org/en/)
 
-2. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repo or [download](https://github.com/AuroPick/link-cleaner/archive/master.zip) it
+2. [Clone](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) this repo or [download](https://github.com/AuroPick/link-cleaner/archive/refs/heads/master.zip) it
 
 3. Use .env.sample files to create .env files
 
